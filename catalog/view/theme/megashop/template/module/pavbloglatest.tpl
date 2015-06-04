@@ -9,29 +9,26 @@
             <div class="col-lg-<?php echo floor(12/$cols);?> col-md-<?php echo floor(12/$cols);?> col-sm-6 col-xs-12">
                 <div class="blog-item">
                     <div class="blog-body">
-                        <?php if( $blog['thumb']  )  { ?>
-                        <div class="image">
-                            <img src="<?php echo $blog['thumb'];?>" title="<?php echo $blog['title'];?>" alt="<?php echo $blog['title'];?>" class="img-responsive"/>
-                        </div>
-                        <?php } ?>
-
                         <div class="create-info">
                             <div class="inner clearfix">
                                 <div class="blog-header">
                                     <h4 class="blog-title">
                                         <a href="<?php echo $blog['link'];?>" title="<?php echo $blog['title'];?>"><?php echo $blog['title'];?></a>
                                     </h4>
-                                </div>
-                                <div class="create-date">
-                                    <div class="created">
-                                        <span class="day"><?php echo date("d",strtotime($blog['created']));?></span>
-                                        <span class="month"><?php echo date("M",strtotime($blog['created']));?></span>
+                                </div>  
+                                <div >
+                                    <?php if( $blog['thumb']  )  { ?>
+                                    <div class="image">
+                                        <img src="<?php echo $blog['thumb'];?>" title="<?php echo $blog['title'];?>" alt="<?php echo $blog['title'];?>" width="100px" style="float:left;"/>
+                                    </div>
+                                    <?php } ?>   
+                                    
+                                    <div class="description">
+                                        <?php $blog['description'] = strip_tags($blog['description']); ?>
+                                        <?php echo utf8_substr( $blog['description'],0, 65 );?>...
                                     </div>
                                 </div>
-                                <div class="description">
-                                    <?php $blog['description'] = strip_tags($blog['description']); ?>
-                                    <?php echo utf8_substr( $blog['description'],0, 76 );?>...
-                                </div>
+                               
                             </div>
                         </div>
                     </div>

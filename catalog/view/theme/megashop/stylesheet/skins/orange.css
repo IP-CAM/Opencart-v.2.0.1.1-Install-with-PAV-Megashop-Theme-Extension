@@ -5159,3 +5159,29 @@ body[class*="-home"] #content {
     float: none !important;
   }
 }
+.bg-title{
+    background: #f1674a;
+    color: white;
+}
+.img-post {
+    border-radius: 10px;
+    padding-top: 15px;
+}
+.content-blog {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.text-blog {
+    text-align: justify;
+}
+.blog-border{
+    border: 1px solid;
+}
+.blog-border:hover{
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+}
+.bd-radius{
+    border-radius: 10px;
+}

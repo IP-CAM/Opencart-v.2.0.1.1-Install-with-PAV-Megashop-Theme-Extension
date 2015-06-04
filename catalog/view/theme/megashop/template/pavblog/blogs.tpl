@@ -12,7 +12,7 @@
         <section class="col-lg-<?php echo $SPAN[1];?> col-md-<?php echo $SPAN[1];?> col-sm-12 col-xs-12">
 
             <div id="content">
-                <?php echo $content_top; ?>
+                <?php echo $content_top;?>
                 <h1 class="title-blogs"><?php echo $heading_title; ?></h1>
                 <a class="rss-wrapper clearfix pull-right" href="<?php echo $latest_rss;?>"><span class="fa fa-feed"></span></a>
                 <section class="pav-filter-blogs wrapper clearfix clearfix blog-wrapper clearfix clearfix">
@@ -35,8 +35,8 @@
                         <?php } ?>
 
                         <?php
-					$cols = $config->get('cat_columns_secondary_blogs');
-                        $cols = !empty($cols)?$cols:1;
+                            $cols = $config->get('cat_columns_secondary_blogs');
+                            $cols = !empty($cols)?$cols:1;
                         if ( count($secondary_blogs) ) { ?>
                         <div class="secondary blog-list-item">
                             <div class="row">

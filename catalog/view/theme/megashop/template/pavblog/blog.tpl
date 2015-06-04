@@ -170,11 +170,10 @@
             <div class="pave-listcomments media-list clearfix">
                 <?php foreach( $comments as $comment ) {  $default='';?>
                 <div class="comment-item media" id="comment<?php echo $comment['comment_id'];?>">
-                    <img class="pull-left" src="<?php echo "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $comment['email'] ) ) ) . "?d=" . urlencode( $default ) . "&s=60" ?>" align="left"/>
                     <div class="comment-wrap media-body">
                         <div class="comment-meta">
-                            <span class="comment-created"><b><?php echo $objlang->get('text_created');?></b><?php echo $comment['created'];?></span>
-                            <span class="comment-postedby"><b><?php echo $objlang->get('text_postedby');?>:</b><?php echo $comment['user'];?></span>
+                             <span class="comment-postedby"><b><?php echo $objlang->get('text_postedby');?>: </b><?php echo $comment['user'];?></span> &nbsp;&nbsp;&nbsp;
+                            <span class="comment-created"><b><?php echo $objlang->get('text_created');?>: </b><?php echo $comment['created'];?></span>
                             <span class="comment-link"><a href="<?php echo $link;?>#comment<?php echo $comment['comment_id'];?>"><?php echo $objlang->get('text_comment_link');?></a></span>
                         </div>
                         <p><?php echo $comment['comment'];?></p>
